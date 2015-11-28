@@ -74,12 +74,12 @@ set noswapfile
 
 
 "create undo file
-if has('persistent_undo')
-  set undolevels=1000         " How many undos
-  set undoreload=10000        " number of lines to save for undo
-  set undofile                " So is persistent undo ...
-  set undodir=/tmp/vimundo/
-endif
+" if has('persistent_undo')
+  " set undolevels=1000         " How many undos
+  " set undoreload=10000        " number of lines to save for undo
+  " set undofile                " So is persistent undo ...
+  " set undodir=/tmp/vimundo/
+" endif
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 " 突出显示当前行等
@@ -89,7 +89,7 @@ set cursorline          " 突出显示当前行
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
 "好处：误删什么的，如果以前屏幕打开，可以找回
-"set t_ti= t_te=
+" set t_ti= t_te=
 
 
 "- 则点击光标不会换,用于复制
@@ -210,10 +210,10 @@ set nrformats=
 
 
 " 相对行号      行号变成相对，可以用 nj  nk   进行跳转 5j   5k 上下跳5行
-"set relativenumber number
+" set relativenumber number
 " au FocusLost * :set norelativenumber number
 " au FocusGained * :set relativenumber
-" " 插入模式下用绝对行号, 普通模式下用相对
+" 插入模式下用绝对行号, 普通模式下用相对
 " autocmd InsertEnter * :set norelativenumber number
 " autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
@@ -340,7 +340,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Go to home and end using capitalized directions
+" Go to home and end using capitalized directions 普通模式下光标跳到行首/行尾(注意大小写敏感)
 noremap H ^
 noremap L $
 
@@ -387,10 +387,10 @@ noremap <silent><leader>/ :nohls<CR>
 "Use arrow key to change buffer"
 " TODO: 如何跳转到确定的buffer?
 " :b1 :b2   :bf :bl
-nnoremap [b :bprevious<cr>
-nnoremap ]b :bnext<cr>
-noremap <left> :bp<CR>
-noremap <right> :bn<CR>
+" nnoremap [b :bprevious<cr>
+" nnoremap ]b :bnext<cr>
+" noremap <left> :bp<CR>
+" noremap <right> :bn<CR>
 
 
 " tab 操作
@@ -398,17 +398,17 @@ noremap <right> :bn<CR>
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
 " http://stackoverflow.com/questions/2005214/switching-to-a-particular-tab-in-vim
 "map <C-2> 2gt
-map <leader>th :tabfirst<cr>
-map <leader>tl :tablast<cr>
+" map <leader>th :tabfirst<cr>
+" map <leader>tl :tablast<cr>
 
-map <leader>tj :tabnext<cr>
-map <leader>tk :tabprev<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprev<cr>
+" map <leader>tj :tabnext<cr>
+" map <leader>tk :tabprev<cr>
+" map <leader>tn :tabnext<cr>
+" map <leader>tp :tabprev<cr>
 
-map <leader>te :tabedit<cr>
-map <leader>td :tabclose<cr>
-map <leader>tm :tabm<cr>
+" map <leader>te :tabedit<cr>
+" map <leader>td :tabclose<cr>
+" map <leader>tm :tabm<cr>
 
 
 " 新建tab  Ctrl+t
