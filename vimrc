@@ -83,8 +83,8 @@ set noswapfile
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 " 突出显示当前行等
-" set cursorcolumn
-" set cursorline          " 突出显示当前行
+set cursorcolumn
+set cursorline          " 突出显示当前行
 
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
@@ -151,7 +151,10 @@ set nowrap
 set showmatch
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
-
+" 自动补全闭合符号
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i}}]]))
 "设置文内智能搜索提示
 " 高亮search命中的文本。
 set hlsearch
