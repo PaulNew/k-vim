@@ -83,8 +83,8 @@ endif
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 " 突出显示当前行等
-set cursorcolumn
-set cursorline          " 突出显示当前行
+" set cursorcolumn
+" set cursorline          " 突出显示当前行
 
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
@@ -606,8 +606,8 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-colorscheme solarized
-" colorscheme Tomorrow-Night
+" colorscheme solarized
+colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desert
 
